@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecast Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='resultcss.css') }}">
+</head>
+<body>
+    <h2>Time Series Forecast Result</h2>
+    
+    <h3>ARIMA Forecast:</h3>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Forecast</th>
+            <th>Price</th>
+        </tr>
+        {% for i in range(arima_dates|length) %}
+        <tr>
+            <td>{{ arima_dates[i] }}</td>
+            <td>{{ arima_forecast[i] }}</td>
+            <td>{{ arima_forecast[i]*2 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>SARIMA Forecast:</h3>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Forecast</th>
+            <th>Price</th>
+        </tr>
+        {% for i in range(sarima_dates|length) %}
+        <tr>
+            <td>{{ sarima_dates[i] }}</td>
+            <td>{{ sarima_forecast[i] }}</td>
+            <td>{{ sarima_forecast[i]*2 }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

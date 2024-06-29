@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecasting</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='formcss.css') }}">
+</head>
+<body>
+    <h2>Time Series Forecasting</h2>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <label for="file">Upload CSV File:</label>
+        <input type="file" name="file" id="file" accept=".csv" required>
+        <br><br>
+        <label for="forecast_days">Number of Days to Forecast:</label>
+        <input type="number" name="forecast_days" id="forecast_days" min="1" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1 style="text-align: center;">Dashboard</h1>
+    <h3 style="text-align: center;"><a href="https://app.powerbi.com/InvitationSignUp?tenant=fe00887a-19c3-42af-8d5a-e26e1c80ff82&invitationId=32e182b7-14cb-4056-a396-80fee851cbb4ckL2yb7b0kMS1VOcD37dIX3ITgrSXnWDtiMnheAhAKs%3d&email=kaushikb.21aid@kongu.edu">Click to view dashboard</a></h3>
+</body>
+</html>
